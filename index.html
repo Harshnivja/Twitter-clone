@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Clone</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body class="text-white bg-black">
+    <div class="container w-[90vw] m-auto flex">
+        <div class="first w-12 md:w-[70%] ">
+            <div class="sidebar sticky top-0 flex flex-col items-center">
+                <div class="logo invert flex w-[45%] py-3">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"
+                        class="w-8 r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao4i r-16y2uox r-8kz0gk">
+                        <g>
+                            <path
+                                d="M18.244 2.25h4.408l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.74-8.845L1.254 2.25H8.08l4.714 6.241zm-1.161 17.52h1.84L7.084 4.126H5.117z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+
+                <ul class="flex flex-col pr-4 items-start space-y-5 md:space-y-2 text-xl font-bold">
+
+                    <li class="flex px-4 py-2 items-center justify-start gap-4 hover:bg-[#16181c] rounded-full">
+                        <span class="material-symbols-outlined">home</span>
+                        <span class="hidden md:block">Home</span>
+                    </li>
+
+                    <li class="flex items-center px-4 py-2 justify-start gap-4 hover:bg-[#16181c] rounded-full">
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
+                        <span class="hidden md:block">Explore</span>
+                    </li>
+
+                    <li class="flex items-center px-4 py-2 justify-start gap-4  hover:bg-[#16181c] rounded-full">
+                        <span class="material-symbols-outlined">
+                            notifications
+                        </span>
+                        <span class="hidden md:block">Notifications</span>
+                    </li>
+
+                    <li class="flex items-center px-4 py-2 justify-start gap-4  hover:bg-[#16181c] rounded-full">
+                        <span class="material-symbols-outlined">drafts</span>
+                        <span class="hidden md:block">Messages</span>
+                    </li>
+
+                    <li class="flex items-center px-4 py-2 justify-start gap-4  hover:bg-[#16181c] rounded-full">
+                        <span class="material-symbols-outlined">
+                            planet
+                        </span>
+                        <span class="hidden md:block">Grok</span>
+                    </li>
+
+                    <li class="flex items-center px-4 py-2 justify-start gap-4  hover:bg-[#16181c] rounded-full"><span
+                            class="material-symbols-outlined">groups_2</span><span
+                            class="hidden md:block">Communities</span>
+                    </li>
+
+                    <li class="flex items-center px-4 py-2 justify-start gap-4  hover:bg-[#16181c] rounded-full"><span
+                            class="material-symbols-outlined">design_services</span><span
+                            class="hidden md:block">Premium</span>
+                    </li>
+
+                    <li class="flex items-center px-4 py-2 justify-start gap-4  hover:bg-[#16181c] rounded-full"><span
+                            class="material-symbols-outlined">bolt</span><span class="hidden md:block">Verified
+                            Orgs</span>
+                    </li>
+
+                    <li class="flex items-center px-4 py-2 justify-start gap-4  hover:bg-[#16181c] rounded-full"><span
+                            class="material-symbols-outlined">person</span><span class="hidden md:block">Profile</span>
+                    </li>
+
+                    <li class="flex items-center px-4 py-2 justify-start gap-4  hover:bg-[#16181c] rounded-full"><span
+                            class="material-symbols-outlined">pending</span><span class="hidden md:block">More</span>
+                    </li>
+
+                </ul>
+
+                <div class="post font-bold hidden md:block m-5 w-[50%] text-black bg-white px-20 py-3 rounded-full">
+                    Post
+                </div>
+
+                <div
+                    class="username mr-6 md: px-4 py-2 w-[68%] flex justify-center md:justify-between hover:bg-[#16181c] rounded-full gap-4">
+                    <div class="text flex space-x-2 items-center justify-start ml-4">
+                        <div class="h-12 w-12 overflow-hidden">
+                            <img class="h-full w-full rounded-full object-cover"
+                                src="https://pbs.twimg.com/profile_images/1940462765350834177/fgB895lr_bigger.png"
+                                alt="">
+                        </div>
+                        <div class="name hidden md:block">
+                            <p class="font-semibold">Harshnivja</p>
+                            <p class="text-gray-500">@harshnivja</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="text-2xl hidden md:block">...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second w-[100%] border border-gray-600 border-y-black">
+            <div class="top sticky top-0 h-14 flex w-full">
+                <div class="left flex justify-center items-center w-[50%] hover:bg-[#16181c] hover:opacity-[.5]">For you
+                </div>
+                <div class="right flex justify-center items-center w-[50%] hover:bg-[#16181c] hover:opacity-[.5]">
+                    Following</div>
+            </div>
+
+            <div class="line bg-gray-600 h-[1px]"></div>
+
+            <div class="what py-4 p-5">
+                <div class="text flex items-center space-x-2">
+                    <img class="h-10 w-10 rounded-full"
+                        src="https://pbs.twimg.com/profile_images/1940462765350834177/fgB895lr_bigger.png" alt="">
+                    <p class="text-xl text-gray-600">What's happening?</p>
+                </div>
+                <div class="icons flex justify-end md:justify-between items-center mt-6">
+
+                    <div class="ico flex gap-3 px-6">
+                        <i class="ri-gallery-line text-xl hover:bg-blue-900 rounded-full px-1 py-1"></i>
+                        <i class="ri-file-gif-line text-xl  hover:bg-blue-900 rounded-full px-1 py-1"></i>
+                        <i class="ri-emoji-sticker-line text-xl hover:bg-blue-900 rounded-full px-1 py-1"></i>
+                        <i class="ri-calendar-line text-xl  hover:bg-blue-900 rounded-full px-1 py-1"></i>
+                        <i class="ri-map-pin-line text-xl  hover:bg-blue-900 rounded-full px-1 py-1"></i>
+                    </div>
+
+                    <div class="post text-black bg-gray-500 font-bold px-6 py-2 rounded-3xl">Post</div>
+                </div>
+            </div>
+
+            <div class="line bg-gray-600 h-[1px]"></div>
+
+            <div class="show flex justify-center hover:bg-[#121416] items-center p-4 text-blue-500">Show 175 posts</div>
+
+            <div class="line bg-gray-600 h-[1px]"></div>
+
+            <div class="posts w-full">
+
+                <div class="post flex gap-3 py-2 m-4">
+                    <div class="image h-12 w-12">
+                        <img class="w-full rounded-full"
+                            src="https://pbs.twimg.com/profile_images/1404378291599937536/b-r3SWlW_bigger.jpg" alt="">
+                    </div>
+
+                    <div class="text gap-y-2">
+                        <p class="font-bold">ICC</p>
+                        <p class="font-semibold">India skipper Shubman Gill follows up his double hundred with another
+                            💯 at Edgbaston 👏</p>
+                        <p class="py-3 text-blue-500">https://icc-cricket.com/tournaments/wo...</p>
+
+                        <div class="image overflow-hidden">
+                            <img class="h-full w-full object-cover rounded-2xl"
+                                src="https://pbs.twimg.com/media/GvGfApoXgAAfvbk?format=jpg&name=small" alt="">
+                        </div>
+
+                        <div class="icons flex justify-between pt-3 w-[90%]">
+                            <i
+                                class="ri-chat-3-line text-xl flex items-center gap-1 px-2 hover:bg-blue-800 rounded-full"><span
+                                    class="text-sm">79</span></i>
+                            <i
+                                class="ri-heart-3-line text-xl flex items-center gap-1 px-2 hover:bg-pink-700 rounded-full"><span
+                                    class="text-sm">10K</span></i>
+                            <i
+                                class="ri-bookmark-line text-xl flex items-center gap- px-2 hover:bg-blue-800 rounded-full"><span
+                                    class="text-sm">100</span></i>
+                            <i
+                                class="ri-share-2-line text-xl flex items-center gap-1 px-2 hover:bg-green-800 rounded-full"><span
+                                    class="text-sm">2K</span></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line bg-gray-600 h-[1px]"></div>
+
+                <div class="post flex gap-3 py-2 m-4">
+                    <div class="image h-12 w-12">
+                        <img class="w-full rounded-full"
+                            src="https://pbs.twimg.com/profile_images/1559375475557818368/ub-ZdXDD_bigger.jpg" alt="">
+                    </div>
+
+                    <div class="text gap-y-2">
+                        <p class="font-bold"> Chennai Super Kings @ChennaiIPL · 5h</p>
+                        <p>The countdown to 07 has begun...🥳
+                            And so has the quest to find the greatest Thala moment of all time! 🏆
+                        </p>
+                        <p class="py-3 text-blue-500">#Th4l4Forever #WhistlePodu 🦁💛 </p>
+
+                        <div class="image h-auto overflow-hidden">
+                            <img class="h-full w-full object-cover rounded-2xl"
+                                src="https://pbs.twimg.com/media/GvLIfMVbMAAHVT4?format=jpg&name=900x900" alt="">
+                        </div>
+
+                        <div class="icons flex justify-between pt-3 w-[90%]">
+                            <i
+                                class="ri-chat-3-line text-xl flex items-center gap-1 px-2 hover:bg-blue-800 rounded-full"><span
+                                    class="text-sm">79</span></i>
+                            <i
+                                class="ri-heart-3-line text-xl flex items-center gap-1 px-2 hover:bg-pink-700 rounded-full"><span
+                                    class="text-sm">10K</span></i>
+                            <i
+                                class="ri-bookmark-line text-xl flex items-center gap- px-2 hover:bg-blue-800 rounded-full"><span
+                                    class="text-sm">100</span></i>
+                            <i
+                                class="ri-share-2-line text-xl flex items-center gap-1 px-2 hover:bg-green-800 rounded-full"><span
+                                    class="text-sm">2K</span></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line bg-gray-600 h-[1px]"></div>
+
+
+
+                <div class="post flex gap-3 py-2 m-4">
+                    <div class="image h-12 w-12">
+                        <img class="w-full rounded-full"
+                            src="https://pbs.twimg.com/profile_images/1572292709833916420/HvsoSR3y_bigger.jpg" alt="">
+                    </div>
+
+                    <div class="text gap-y-2">
+                        <p class="font-bold"> Wimbledon @Wimbledon . 9h</p>
+                        <p>Recapping Day 8 with The Tennis Podcast 🎙️</p>
+                        <p class="py-3 text-blue-500">#Wimbledon</p>
+
+                        <div class="image h-auto overflow-hidden">
+                            <img class="h-full w-full object-cover rounded-2xl"
+                                src="https://pbs.twimg.com/media/GvSGf_nbwAAPX3j?format=png&name=small" alt="">
+                        </div>
+
+                        <div class="icons flex justify-between pt-3 w-[90%]">
+                            <i
+                                class="ri-chat-3-line text-xl flex items-center gap-1 px-2 hover:bg-blue-800 rounded-full"><span
+                                    class="text-sm">79</span></i>
+                            <i
+                                class="ri-heart-3-line text-xl flex items-center gap-1 px-2 hover:bg-pink-700 rounded-full"><span
+                                    class="text-sm">10K</span></i>
+                            <i
+                                class="ri-bookmark-line text-xl flex items-center gap- px-2 hover:bg-blue-800 rounded-full"><span
+                                    class="text-sm">100</span></i>
+                            <i
+                                class="ri-share-2-line text-xl flex items-center gap-1 px-2 hover:bg-green-800 rounded-full"><span
+                                    class="text-sm">2K</span></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="line bg-gray-600 h-[1px]"></div>
+
+                <div class="post flex gap-3 py-2 m-4">
+                    <div class="image h-12 w-12">
+                        <img class="w-full rounded-full"
+                            src="https://pbs.twimg.com/profile_images/1715394986970316800/sKEpjY0a_x96.jpg" alt="">
+                    </div>
+
+                    <div class="text gap-y-2">
+                        <p class="font-bold">
+                            Richard Kettleborough
+                            @RichKettle07
+                            ·
+                            8h</p>
+                        <p>- MCC Clarifies that Akash Deep's delivery to Joe Root was fair & legal under Law 21.5.1</p>
+                        <p class="py-3 text-blue-500">#INDvsENG</p>
+
+                        <div class="image h-auto overflow-hidden">
+                            <video class="h-full w-full object-cover rounded-xl" controls src="video/video.mp4"></video>
+                        </div>
+
+                        <div class="icons flex justify-between pt-3 w-[90%]">
+                            <i
+                                class="ri-chat-3-line text-xl flex items-center gap-1 px-2 hover:bg-blue-800 rounded-full"><span
+                                    class="text-sm">79</span></i>
+                            <i
+                                class="ri-heart-3-line text-xl flex items-center gap-1 px-2 hover:bg-pink-700 rounded-full"><span
+                                    class="text-sm">10K</span></i>
+                            <i
+                                class="ri-bookmark-line text-xl flex items-center gap- px-2 hover:bg-blue-800 rounded-full"><span
+                                    class="text-sm">100</span></i>
+                            <i
+                                class="ri-share-2-line text-xl flex items-center gap-1 px-2 hover:bg-green-800 rounded-full"><span
+                                    class="text-sm">2K</span></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="line bg-gray-600 h-[1px]"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="third w-[70%] m-4 hidden xl:block">
+            <div class="search sticky top-1 w-[90%] z-10">
+                <input class="w-full  bg-[#16181c]  px-6 py-2 rounded-3xl" type="text" placeholder="Search">
+            </div>
+
+            <div class="what mt-4 w-[100%] sticky top-[-35%] border border-gray-600 rounded-2xl">
+                <h1 class="m-4 text-2xl">What's happening</h1>
+                <div class="text flex px-4 gap-5 py-2 w-full hover:bg-[#16181c]">
+
+                    <div class="image w-24 overflow-hidden">
+                        <img class="w-full object-cover rounded-xl"
+                            src="https://pbs.twimg.com/semantic_core_img/1940112751373737984/SKNkptPX?format=jpg&name=240x240"
+                            alt="">
+                    </div>
+
+                    <div>
+                        <p class="font-semibold">NFL Top 100 Countdown</p>
+                        <p class="text-gray-500">Live</p>
+                    </div>
+                </div>
+
+                <div class="text hover:bg-[#16181c]  px-4 py-2 flex justify-between">
+                    <div>
+                        <p class="text-gray-500 text-sm">BamBam (GOT7) · Trending</p>
+                        <p class="font-bold">#BamBam</p>
+                        <p class="text-gray-600 text-sm">139K posts</p>
+                    </div>
+
+                    <p class="text-2xl text-gray-600">...</p>
+                </div>
+                <div class="text hover:bg-[#16181c]  px-4 py-2 flex justify-between">
+                    <div>
+                        <p class="text-gray-500 text-sm">Entertainment · Trending</p>
+                        <p class="font-bold">#Dhurandhar</p>
+                        <p class="text-gray-600 text-sm">1,948 posts</p>
+                    </div>
+
+                    <p class="text-2xl text-gray-600">...</p>
+                </div>
+                <div class="text hover:bg-[#16181c]  px-4 py-2 flex justify-between">
+                    <div>
+                        <p class="text-gray-500 text-sm">Travel · Trending</p>
+                        <p class="font-bold">#trainaccident</p>
+                        <p class="text-gray-600 text-sm">1,289 posts</p>
+                    </div>
+
+                    <p class="text-2xl text-gray-600">...</p>
+                </div>
+                <div class="text hover:bg-[#16181c]  px-4 py-2 flex justify-between">
+                    <div>
+                        <p class="text-gray-500 text-sm">Trending in India</p>
+                        <p class="font-bold">#KantaraChapter1</p>
+                        <p class="text-gray-600 text-sm">3,677 posts</p>
+                    </div>
+
+                    <p class="text-2xl text-gray-600">...</p>
+                </div>
+
+                <div class="show px-4 py-2 text-blue-700">Show more</div>
+
+            </div>
+
+
+            <div class="who w-[100%] sticky top-[35vh] border border-gray-600 mt-4  rounded-2xl">
+                <h1 class="font-bold text-xl px-3 py-5">Who to follow</h1>
+
+                <div class="virat hover:bg-[#16181c]  flex justify-between items-center px-3 py-3">
+                    <div class="flex gap-2">
+                        <img class="h-12 w-12 rounded-full"
+                            src="https://pbs.twimg.com/profile_images/1562753500726976514/EPSUNyR3_bigger.jpg" alt="">
+                        <div>
+                            <p class="font-bold">Virat Kohli</p>
+                            <p class="text-gray-600">@Viratkohli</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="follow bg-white text-black font-bold px-5 flex justify-center items-center py-2 rounded-3xl">
+                        Follow</div>
+                </div>
+                <div class="virat hover:bg-[#16181c]  flex justify-between items-center px-3 py-3">
+                    <div class="flex gap-2">
+                        <img class="h-12 w-12 rounded-full"
+                            src="https://pbs.twimg.com/profile_images/1560854097481216000/jMpqT9Br_bigger.jpg" alt="">
+                        <div>
+                            <p class="font-bold">K L Rahul</p>
+                            <p class="text-gray-600">@klrahul</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="follow bg-white font-bold text-black px-5 flex justify-center items-center py-2 rounded-3xl">
+                        Follow</div>
+                </div>
+                <div class="virat hover:bg-[#16181c]  flex justify-between items-center px-3 py-3">
+                    <div class="flex gap-2">
+                        <img class="h-12 w-12 rounded-full"
+                            src="https://pbs.twimg.com/profile_images/1559124414251565056/ud3MXsiZ_bigger.jpg" alt="">
+                        <div>
+                            <p class="font-bold">Rishabh Pant</p>
+                            <p class="text-gray-600">@RishabhPant17</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="follow  bg-white text-black font-bold px-5 flex justify-center items-center py-2 rounded-3xl">
+                        Follow</div>
+                </div>
+
+                <div class="show hover:bg-[#16181c]  rounded-b-2xl px-4  text-blue-600 py-3">Show more</div>
+
+            </div>
+
+            <div class="last sticky top-[85vh] mt-8 px-5 space-y-1 text-gray-600">
+                <p class="text-xs">Terms of Service
+                    |
+                    Privacy Policy
+                    |
+                    Cookie Policy
+                    |</p>
+
+                <p class="text-xs">More...
+                    © 2025 X Corp.</p>
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
